@@ -1,36 +1,151 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI Coding Agents Presentation
 
-## Getting Started
+Современная презентация о AI Coding Agents и LLM для разработчиков, построенная на Next.js 15 и shadcn/ui.
 
-First, run the development server:
+## Технологии
+
+- **Framework:** Next.js 15 (App Router)
+- **UI Library:** shadcn/ui с Radix UI primitives
+- **Styling:** Tailwind CSS 4
+- **Charts:** Recharts
+- **Language:** TypeScript
+- **State Management:** React hooks (useState, useMemo, useCallback)
+
+## Возможности
+
+- 📱 Полностью адаптивный дизайн
+- ⌨️ Навигация с клавиатуры (стрелки, Home, End)
+- 👆 Поддержка touch swipe для мобильных устройств
+- 🎨 Кастомная дизайн-система на базе оригинальных цветов
+- ♿ Accessibility-first подход (ARIA labels, keyboard navigation)
+- 📊 Интерактивные графики с Recharts
+- 🔍 Сортировка и фильтрация таблиц
+- 💬 Модальные окна с детальной информацией
+- ⚡ Оптимизированная производительность
+
+## Структура проекта
+
+```
+ai-presentation/
+├── app/
+│   ├── layout.tsx          # Root layout
+│   ├── page.tsx            # Main page with slide logic
+│   └── globals.css         # Global styles
+├── components/
+│   ├── hero/
+│   │   └── Hero.tsx        # Hero section
+│   ├── navigation/
+│   │   ├── Navbar.tsx      # Main navigation
+│   │   └── SlideNavigation.tsx  # Slide controls
+│   ├── slides/
+│   │   ├── IntroSlide.tsx
+│   │   ├── ModelsSlide.tsx
+│   │   ├── EngineeringSlide.tsx
+│   │   ├── ToolsSlide.tsx
+│   │   └── InferenceSlide.tsx
+│   ├── charts/
+│   │   └── PriceChart.tsx  # Recharts scatter chart
+│   ├── modals/
+│   │   ├── ModelModal.tsx
+│   │   └── ToolModal.tsx
+│   └── ui/                 # shadcn/ui components
+└── lib/
+    ├── content-data.ts     # Typed content data
+    └── utils.ts            # Utility functions
+```
+
+## Запуск проекта
+
+### Установка зависимостей
+
+```bash
+npm install
+```
+
+### Запуск dev сервера
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Откройте [http://localhost:3000](http://localhost:3000) в браузере.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Сборка для production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## Навигация
 
-To learn more about Next.js, take a look at the following resources:
+### Клавиатура
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `←` / `→` - Предыдущий/следующий слайд
+- `Home` - Перейти в начало (Hero)
+- `End` - Перейти к последнему слайду
+- `Escape` - Закрыть модальное окно
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Touch жесты
 
-## Deploy on Vercel
+- Swipe влево - Следующий слайд
+- Swipe вправо - Предыдущий слайд
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Мышь
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Клик по индикаторам слайдов
+- Клик по кнопкам навигации
+- Клик по элементам меню
+
+## Содержание слайдов
+
+1. **О чём и зачем** - Цели внедрения AI Coding Agents
+2. **Модели** - Сравнение моделей, цены, квантизация, галлюцинации
+3. **Инженерия** - Context engineering, prompt engineering, проблемы
+4. **Инструменты** - AI coding agents, безопасность, MCP, оптимизация
+5. **Inference и провайдеры** - Варианты использования, провайдеры, бесплатные уровни
+
+## Кастомизация
+
+### Цвета
+
+Основные цвета определены в `app/globals.css`:
+
+- **Primary** (Teal): `--color-teal-500`
+- **Secondary** (Brown): `--color-brown-600`
+- **Background**: `--color-cream-50`
+- **Foreground**: `--color-slate-900`
+
+### Данные
+
+Все данные презентации находятся в `lib/content-data.ts`. Для изменения содержимого отредактируйте объект `contentData`.
+
+## Производительность
+
+- React.memo для тяжелых компонентов
+- useMemo для вычисляемых значений
+- useCallback для обработчиков событий
+- Lazy rendering слайдов (рендерится только активный)
+
+## Accessibility
+
+- Полная поддержка клавиатурной навигации
+- ARIA labels на всех интерактивных элементах
+- Semantic HTML
+- Focus states для всех кнопок и ссылок
+- Screen reader friendly
+
+## Browser Support
+
+- Chrome 90+
+- Firefox 88+
+- Safari 14+
+- Edge 90+
+
+## Лицензия
+
+MIT
+
+## Автор
+
+Презентация создана для команды разработчиков (Октябрь 2025)
