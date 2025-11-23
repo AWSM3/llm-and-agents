@@ -154,7 +154,7 @@ export function EngineeringSlide() {
                 </div>
                 <div className="space-y-3">
                   <div className="flex justify-between text-xs font-medium text-muted-foreground px-1">
-                     <span>Code (0.0)</span>
+                     <span>Code (0.4)</span>
                      <span>Standard (0.7)</span>
                      <span>Creative (1.0+)</span>
                   </div>
@@ -165,7 +165,7 @@ export function EngineeringSlide() {
                     <Progress value={15} className="h-4" />
                   </div>
                   <p className="text-xs text-primary/80 mt-2 font-medium">
-                    Для генерации кода используйте низкие значения (0.0-0.2)
+                    Для генерации кода используйте низкие или средние значения (0.2-0.6)
                   </p>
                 </div>
               </div>
@@ -199,7 +199,8 @@ export function EngineeringSlide() {
                  </div>
                  <Progress value={90} className="h-2 mb-3" />
                  <p className="text-[10px] text-muted-foreground leading-tight">
-                    <strong>Nucleus sampling:</strong> Простыми словами — это &laquo;фильтр бреда&raquo;. Модель рассматривает только топ самых вероятных следующих слов, а все странные и маловероятные варианты просто игнорирует.
+                    <strong>Nucleus sampling:</strong> Простыми словами — это &laquo;фильтр бреда&raquo;.
+                     Модель рассматривает только топ самых вероятных следующих слов, а все странные и маловероятные варианты просто игнорирует.
                  </p>
               </div>
 
@@ -214,6 +215,10 @@ export function EngineeringSlide() {
                        <span>max_output:</span>
                        <span>8192</span>
                     </div>
+                     <p className="text-[10px] text-muted-foreground leading-tight">
+                         <strong>Лимит на максимальный объем ответа модели</strong>, измеряемый в токенах.
+                         Если генерация достигнет 8192 токенов, нейросеть принудительно закончит генерацию, даже если не закончила мысль.
+                     </p>
                  </div>
                  <div className="flex flex-col justify-between">
                     <div className="flex items-center gap-2 mb-2">
@@ -223,6 +228,12 @@ export function EngineeringSlide() {
                     <div className="flex gap-2 flex-wrap content-end">
                        <Badge variant="secondary" className="font-mono text-[10px] px-2 py-1 bg-background border">User:</Badge>
                        <Badge variant="secondary" className="font-mono text-[10px] px-2 py-1 bg-background border">Observation:</Badge>
+
+                        <p className="text-[10px] text-muted-foreground leading-tight">
+                            <strong>Задает список фраз-триггеров</strong>, при появлении которых модель обязана немедленно прекратить генерацию текста.
+                            Маркеры User: и Observation: здесь нужны, чтобы модель не начинала дописывать диалог за человека и не выдумывала результаты работы программных инструментов,
+                            а останавливалась и ждала реальных данных извне.
+                        </p>
                     </div>
                  </div>
               </div>
