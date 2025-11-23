@@ -6,7 +6,7 @@ export function Hero() {
   const { hero } = contentData;
 
   return (
-    <header className="min-h-screen flex items-center justify-center bg-gradient-to-br from-teal-50 via-cream-50 to-orange-50 fade-in">
+    <header className="min-h-screen flex items-center justify-center fade-in">
       <div className="container mx-auto px-4 text-center">
         <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-slate-900 mb-6 leading-tight">
           {hero.title}

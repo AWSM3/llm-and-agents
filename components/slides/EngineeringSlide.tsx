@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Progress } from '@/components/ui/progress';
+import Image from 'next/image';
 
 export function EngineeringSlide() {
   const { engineering, models } = contentData.sections;
@@ -39,7 +40,7 @@ export function EngineeringSlide() {
         </Card>
 
         {/* Context Strategies */}
-        <Card className="mb-12">
+        <Card className="mb-12" id="context-strats">
           <CardHeader>
             <CardTitle>{engineering.contextStrategies.heading}</CardTitle>
           </CardHeader>
@@ -71,6 +72,9 @@ export function EngineeringSlide() {
                 </Card>
               ))}
             </div>
+              <div className="w-full mt-12 justify-items-center">
+                  <Image src="context.png" className="rounded-2xl w-3/6" width={100} height={100} alt={''} />
+              </div>
           </CardContent>
         </Card>
 

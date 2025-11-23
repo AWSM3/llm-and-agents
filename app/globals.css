@@ -91,6 +91,10 @@
   --sidebar-ring: var(--color-teal-500);
 }
 
+.html {
+  @apply bg-gradient-to-br from-teal-50 to-orange-50;
+}
+
 .dark {
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
@@ -221,4 +225,22 @@
 
 .highlighted-color {
   @apply bg-purple-500/50
+}
+
+#context-strats {
+  position: relative;
+  z-index: 1;
+}
+#context-strats::before {
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-image: url('context.png');
+  background-size: cover;
+  background-position: center;
+  filter: blur(150px);
+  z-index: -1;
 }

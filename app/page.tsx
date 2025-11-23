@@ -109,7 +109,7 @@ export default function Home() {
 
   return (
     <div
-      className="min-h-screen"
+      className="min-h-screen bg-gradient-to-tr from-orange-50/50 via-purple-50/50 to-orange-50/50"
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
       role="main"
