@@ -15,6 +15,55 @@ export function AgentsSlide() {
           {agents.title}
         </h2>
 
+        {/* Definition Block */}
+        {agents.definition && (
+          <div className="bg-secondary/30 rounded-3xl p-6 md:p-10 mb-12 mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+              {/* Left: Text content */}
+              <div className="space-y-6">
+                <div className="space-y-3">
+                  <p className="text-xl md:text-3xl font-medium flex flex-wrap items-center gap-2">
+                    <span className="bg-blue-200 dark:bg-blue-900/50 px-3 py-1 rounded-lg whitespace-nowrap">
+                      {agents.definition.modelRole.split(' — ')[0]}
+                    </span>
+                    <span>— {agents.definition.modelRole.split(' — ')[1]}</span>
+                  </p>
+                  <p className="text-xl md:text-3xl font-medium flex flex-wrap items-center gap-2">
+                    <span className="bg-blue-200 dark:bg-blue-900/50 px-3 py-1 rounded-lg whitespace-nowrap">
+                      {agents.definition.agentRole.split(' — ')[0]}
+                    </span>
+                    <span>— {agents.definition.agentRole.split(' — ')[1]}</span>
+                  </p>
+                </div>
+                <p className="text-lg md:text-2xl text-muted-foreground leading-relaxed">
+                  {agents.definition.description}
+                </p>
+              </div>
+
+              {/* Right: Category cards */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                {agents.definition.categories.map((category, index) => (
+                  <div 
+                    key={index} 
+                    className={`rounded-2xl p-5 text-center space-y-3 ${
+                      index === 0 ? 'bg-cyan-100 dark:bg-cyan-900/30' :
+                      index === 1 ? 'bg-blue-100 dark:bg-blue-900/30' :
+                      'bg-pink-100 dark:bg-pink-900/30'
+                    }`}
+                  >
+                    <div className="text-4xl">{category.icon}</div>
+                    <h4 className="font-bold text-lg">{category.title}</h4>
+                    <p className="text-sm text-muted-foreground leading-snug">
+                      ({category.examples}).
+                    </p>
+                    <p className="text-sm font-medium">{category.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
+
         {/* Agents Categories */}
         <Tabs defaultValue="search" className="w-full">
           <TabsList className="grid w-full grid-cols-3 md:grid-cols-3 mb-8">

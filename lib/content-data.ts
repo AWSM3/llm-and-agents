@@ -399,6 +399,18 @@ export interface ContentData {
     };
     agents: {
       title: string;
+      definition: {
+        title: string;
+        modelRole: string;
+        agentRole: string;
+        description: string;
+        categories: Array<{
+          icon: string;
+          title: string;
+          examples: string;
+          description: string;
+        }>;
+      };
       searchAgents: {
         items: AgentSearchItem[];
       };
@@ -1086,6 +1098,32 @@ export const contentData: ContentData = {
     },
     "agents": {
       "title": "Агенты",
+      "definition": {
+        "title": "Что такое Агент?",
+        "modelRole": "Модель — это мозг.",
+        "agentRole": "Агент — это сотрудник.",
+        "description": "Мы даём ему цель, а он сам решает, какие шаги предпринять, какие кнопки нажать и где что погуглить.",
+        "categories": [
+          {
+            "icon": "🔍",
+            "title": "Поисковые",
+            "examples": "Perplexity, ChatGPT DeepResearch, Gemini DeepResearch",
+            "description": "Ищут информацию."
+          },
+          {
+            "icon": "🌐",
+            "title": "Браузерные",
+            "examples": "могут ходить по сайтам, кликать кнопки",
+            "description": "Автономный веб-серфинг."
+          },
+          {
+            "icon": "</> ",
+            "title": "Coding Agents",
+            "examples": "пишут код",
+            "description": "Автоматическая разработка."
+          }
+        ]
+      },
       "searchAgents": {
         "items": [
           {
