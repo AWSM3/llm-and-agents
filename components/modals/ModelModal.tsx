@@ -70,7 +70,7 @@ export function ModelModal({ model, isOpen, onClose }: ModelModalProps) {
         </div>
 
         <div className="mt-4 text-xs text-muted-foreground">
-          <p>Данные актуальны на октябрь 2025 года</p>
+          <p>Данные актуальны на ноябрь 2025 года</p>
         </div>
       </DialogContent>
     </Dialog>

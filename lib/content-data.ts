@@ -536,7 +536,7 @@ export const contentData: ContentData = {
   "hero": {
     "title": "LLM и AI Coding Agents для разработчиков",
     "subtitle": "Анализ актуальных решений и подходов",
-    "date": "Октябрь 2025 г."
+    "date": "Ноябрь 2025 г."
   },
   "sections": {
     "overview": {
@@ -585,7 +585,7 @@ export const contentData: ContentData = {
           "examples": [
             "ChatGPT 5",
             "Claude Sonnet/Haiku 4.5",
-            "Gemini 2.5 Pro/Flash",
+            "Gemini 2.5 Pro/Flash, 3 Pro",
             "Grok 4 / Grok Code",
             "Mistral / Codestral / Devstral",
             "DeepSeek 3.1/3.2",
@@ -763,7 +763,7 @@ export const contentData: ContentData = {
           },
           {
             "label": "Премиум сегмент",
-            "text": "Claude Opus 4.1 ($15.00/$75.00) - наивысшая точность, GPT 5 Pro ($15/$120.00)"
+            "text": "Claude Opus 4.5 ($5.00/$25.00) - наивысшая точность, GPT 5 Pro ($15/$120.00)"
           }
         ]
       },
@@ -858,13 +858,13 @@ export const contentData: ContentData = {
             "type": "medium",
             "title": "Средние окна",
             "range": "200-400K tokens",
-            "models": "Qwen3 Coder 480B, GPT-5, Claude Opus 4.1"
+            "models": "Qwen3 Coder 480B, GPT-5.1, Claude Opus 4.5"
           },
           {
             "type": "large",
             "title": "Большие окна",
             "range": "1M+ tokens",
-            "models": "Gemini 2.5 Pro, Claude Sonnet 4.5, Grok 4 Fast"
+            "models": "Gemini 2.5 Pro / 3 Pro, Claude Sonnet 4.5, Grok 4 Fast"
           }
         ]
       },
@@ -1434,7 +1434,7 @@ export const contentData: ContentData = {
             "icon": "🔄",
             "title": "Ансамбли моделей",
             "description": "Комбинация нескольких дешёвых моделей (в т.ч. автоматизированные пайплайны и воркфлоу)",
-            "result": "Gemini 2.5 Pro для брейншторма концепции + Claude Haiku 4.5 для архитектуры + Grok Code для кодинга"
+            "result": "Gemini 3 Pro для брейншторма концепции + Claude Haiku 4.5 для архитектуры + Grok Code для кодинга"
           },
           {
             "icon": "🎓",
@@ -1799,7 +1799,7 @@ export const contentData: ContentData = {
     }
   },
   "footer": {
-    "text": "Данные актуальны на октябрь 2025 года."
+    "text": "Данные актуальны на ноябрь 2025 года."
   },
   "modelComparison": [
     {
@@ -1869,13 +1869,13 @@ export const contentData: ContentData = {
       "strengths": "685B params (37B active), open-weight, очень дешевый"
     },
     {
-      "model": "Gemini 2.5 Pro",
-      "id": "google/gemini-2.5-pro",
+      "model": "Gemini 3 Pro",
+      "id": "google/gemini-3-pro",
       "context_window": "1,048,576 tokens",
-      "input_price": "$1.25",
-      "output_price": "$10.00",
+      "input_price": "$2",
+      "output_price": "$12.00",
       "provider": "Google",
-      "release_date": "Май 2025",
+      "release_date": "Ноябрь 2025",
       "rating": 87,
       "strengths": "Мультимодальность, Deep Think, большой контекст"
     },
@@ -1891,15 +1891,15 @@ export const contentData: ContentData = {
       "strengths": "Самый дешевый в GPT-5 семье, reasoning, быстрый"
     },
     {
-      "model": "Claude Opus 4.1",
-      "id": "anthropic/claude-opus-4.1",
+      "model": "Claude Opus 4.5",
+      "id": "anthropic/claude-opus-4.5",
       "context_window": "200,000 tokens",
-      "input_price": "$15.00",
-      "output_price": "$75.00",
+      "input_price": "$5.00",
+      "output_price": "$25.00",
       "provider": "Anthropic",
-      "release_date": "4 августа 2025",
+      "release_date": "24 ноября 2025",
       "rating": 82,
-      "strengths": "Высокая точность (74.5% SWE-bench), премиум модель"
+      "strengths": "Высокая точность (80.9% SWE-bench), премиум модель"
     },
     {
       "model": "GLM 4.6",
