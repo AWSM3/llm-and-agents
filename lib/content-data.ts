@@ -1814,6 +1814,28 @@ export const contentData: ContentData = {
       "strengths": "Лучший для coding (77.2% SWE-bench), agents, 30+ часов фокуса"
     },
     {
+      "model": "Gemini 3 Pro",
+      "id": "google/gemini-3-pro",
+      "context_window": "1,048,576 tokens",
+      "input_price": "$2",
+      "output_price": "$12.00",
+      "provider": "Google",
+      "release_date": "Ноябрь 2025",
+      "rating": 87,
+      "strengths": "Мультимодальность, Deep Think, большой контекст"
+    },
+    {
+      "model": "Claude Opus 4.5",
+      "id": "anthropic/claude-opus-4.5",
+      "context_window": "200,000 tokens",
+      "input_price": "$5.00",
+      "output_price": "$25.00",
+      "provider": "Anthropic",
+      "release_date": "24 ноября 2025",
+      "rating": 82,
+      "strengths": "Высокая точность (80.9% SWE-bench), премиум модель"
+    },
+    {
       "model": "Grok 4 Fast",
       "id": "x-ai/grok-4-fast",
       "context_window": "2,000,000 tokens",
@@ -1869,17 +1891,6 @@ export const contentData: ContentData = {
       "strengths": "685B params (37B active), open-weight, очень дешевый"
     },
     {
-      "model": "Gemini 3 Pro",
-      "id": "google/gemini-3-pro",
-      "context_window": "1,048,576 tokens",
-      "input_price": "$2",
-      "output_price": "$12.00",
-      "provider": "Google",
-      "release_date": "Ноябрь 2025",
-      "rating": 87,
-      "strengths": "Мультимодальность, Deep Think, большой контекст"
-    },
-    {
       "model": "GPT-5 Mini",
       "id": "openai/gpt-5-mini",
       "context_window": "400,000 tokens",
@@ -1889,17 +1900,6 @@ export const contentData: ContentData = {
       "release_date": "Август 2025",
       "rating": 86,
       "strengths": "Самый дешевый в GPT-5 семье, reasoning, быстрый"
-    },
-    {
-      "model": "Claude Opus 4.5",
-      "id": "anthropic/claude-opus-4.5",
-      "context_window": "200,000 tokens",
-      "input_price": "$5.00",
-      "output_price": "$25.00",
-      "provider": "Anthropic",
-      "release_date": "24 ноября 2025",
-      "rating": 82,
-      "strengths": "Высокая точность (80.9% SWE-bench), премиум модель"
     },
     {
       "model": "GLM 4.6",
